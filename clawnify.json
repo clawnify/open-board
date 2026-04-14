@@ -1,0 +1,40 @@
+{
+  "$schema": "https://app.clawnify.com/schema/v1/clawnify.json",
+  "version": 1,
+  "name": "Board App",
+  "description": "Infinite canvas whiteboard for brainstorming, diagramming, and visual collaboration. Supports sticky notes, shapes, freehand drawing, connectors, and text — like Miro. Best for team brainstorming tools, wireframing, mind mapping, or any visual planning board.",
+  "icon": "icon.svg",
+  "tags": ["whiteboard", "board", "canvas", "collaboration", "brainstorm"],
+
+  "app": {
+    "framework": "preact+hono",
+    "database": true,
+    "storage": false
+  },
+
+  "deploy": {
+    "title": "Deploy your Whiteboard",
+    "subtitle": "Like Miro — your own infinite canvas board in minutes",
+    "prompts": [
+      {
+        "key": "brand_name",
+        "label": "Brand or company name",
+        "placeholder": "e.g. TeamBoard",
+        "required": true
+      },
+      {
+        "key": "use_case",
+        "label": "What will you use it for?",
+        "placeholder": "e.g. Sprint retrospectives and brainstorming sessions"
+      },
+      {
+        "key": "details",
+        "label": "Any other details?",
+        "type": "textarea",
+        "placeholder": "Default sticky note colors, shape templates, custom categories..."
+      }
+    ]
+  },
+
+  "agent": "agent.md"
+}
