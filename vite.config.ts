@@ -6,9 +6,11 @@ export default defineConfig({
   plugins: [preact(), tailwindcss()],
   build: { outDir: "dist" },
   server: {
-    port: 5179,
     proxy: {
-      "/api": "http://localhost:3007",
+      "/api": {
+        target: "http://localhost:8787",
+        changeOrigin: true,
+      },
     },
   },
 });
